@@ -68,7 +68,10 @@ namespace ScrabbleScoreApp
         {
           wordValue += 5;
         }
-  
+        else if (userInputArray[i] == 'j' || userInputArray[i] == 'x')
+        {
+          wordValue += 8;
+        }
       }
       return wordValue;
     }
