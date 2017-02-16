@@ -24,7 +24,6 @@ namespace ScrabbleScoreApp
       int wordValue = 0;
 
       char[] onePoint = {'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'};
-      char[] twoPoint = {'d', 'g'};
       char[] threePoint = {'b', 'c', 'm', 'p'};
       char[] fourPoint = {'f', 'h', 'v', 'w', 'y'};
 
@@ -37,14 +36,6 @@ namespace ScrabbleScoreApp
           if (userInputArray[i].Equals(onePoint[j]))
           {
             wordValue += 1;
-          }
-        }
-        //For 2 points
-        for (int j = 0; j < twoPoint.Length; j++)
-        {
-          if (userInputArray[i].Equals(twoPoint[j]))
-          {
-            wordValue += 2;
           }
         }
         //For 3 points
@@ -63,14 +54,25 @@ namespace ScrabbleScoreApp
             wordValue += 4;
           }
         }
+        //For 2 points
+        if (userInputArray[i] == 'd' || userInputArray[i] == 'g')
+        {
+          wordValue += 2;
+        }
         //For 5 points
-        if (userInputArray[i] == 'k')
+        else if (userInputArray[i] == 'k')
         {
           wordValue += 5;
         }
+        //For 8 points
         else if (userInputArray[i] == 'j' || userInputArray[i] == 'x')
         {
           wordValue += 8;
+        }
+        //For 10 points
+        else if (userInputArray[i] == 'q' || userInputArray[i] == 'z')
+        {
+          wordValue += 10;
         }
       }
       return wordValue;
