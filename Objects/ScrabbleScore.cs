@@ -32,10 +32,8 @@ namespace ScrabbleScoreApp
       char[] tenPoint = {'q', 'z'};
       char[][] pointArrays = {onePoint, twoPoint, threePoint, fourPoint, fivePoint, eightPoint, tenPoint};
 
-
       for (int i = 0; i < userInputArray.Length; i++)
       {
-
         for (int k = 0; k < pointArrays.Length; k++)
         {
           for (int j = 0; j < pointArrays[k].Length; j++)
@@ -45,35 +43,42 @@ namespace ScrabbleScoreApp
             if (k == 0 && iteration)
             {
               wordValue += 1;
+              break;
             }
             else if (k == 1 && iteration)
             {
               wordValue += 2;
+              break;
             }
             //For 3 point
             else if (k == 2 && iteration)
             {
               wordValue += 3;
+              break;
             }
             //For 4 point
             else if (k == 3 && iteration)
             {
               wordValue += 4;
+              break;
             }
             //For 5 point
             else if (k == 4 && iteration)
             {
               wordValue +=5;
+              break;
             }
             //For 8 point
             else if (k == 5 && iteration)
             {
               wordValue +=8;
+              break;
             }
             //For 10 point
             else if (k == 6 && iteration)
             {
               wordValue +=10;
+              break;
             }
           }
         }

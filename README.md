@@ -28,39 +28,39 @@ This website takes a word and returns the Scrabble score for that word.
 
 **The user enters non-alphabetic characters and the program returns a value of 0.**
 * Example Input: "42"
-* Example Output: "0"
+* Example Output: 0
 
 **The user enters a one-letter word and the program determines the value for that word.**
 * Example Input: "A"
-* Example Output: "1"
+* Example Output: 1
 
 **The user enters a two-letter word with letter values of 2 and 1, and the program returns a value of 3.**
 * Example Input: "do"
-* Example Output: "3"
+* Example Output: 3
 
 **The user enters a three-letter word with values of 3, 2, and 1 and the program returns a value of 6.**
 * Example Input: "bad"
-* Example Output: "6"
+* Example Output: 6
 
 **The user enters a four-letter word with values of 4, 3, 2, and 1 and the program returns a value of 10.**
 * Example Input: "body"
-* Example Output: "10"
+* Example Output: 10
 
 **The user enters a five-letter word with values of 5, 4, 3, 2, and 1 and the program returns a value of 15.**
 * Example Input: "abdfk"
-* Example Output: "15"
+* Example Output: 15
 
 **The user enters a six-letter word with values of 8, 5, 4, 3, 2, and 1 and the program returns a value of 23.**
 * Example Input: "adbfkj"
-* Example Output: "23"
+* Example Output: 23
 
 **The user enters a seven-letter word with values of 10, 8, 5, 4, 3, 2, and 1 and the program returns a value of 33.**
 * Example Input: "adbfkjq"
-* Example Output: "33"
+* Example Output: 33
 
 **The user enters a capitalized word and the program returns a value.**
 * Example Input: "Jiwon"
-* Example Output: "15"
+* Example Output: 15
 
 ## Support and contact details
 
