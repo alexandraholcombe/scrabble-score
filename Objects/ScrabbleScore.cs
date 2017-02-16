@@ -25,6 +25,7 @@ namespace ScrabbleScoreApp
 
       char[] onePoint = {'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'};
       char[] twoPoint = {'d', 'g'};
+      char[] threePoint = {'b', 'c', 'm', 'p'};
 
       for (int i = 0; i < userInputArray.Length; i++)
       {
@@ -40,6 +41,14 @@ namespace ScrabbleScoreApp
           if (userInputArray[i].Equals(twoPoint[j]))
           {
             wordValue += 2;
+          }
+        }
+
+        for (int j = 0; j < threePoint.Length; j++)
+        {
+          if (userInputArray[i].Equals(threePoint[j]))
+          {
+            wordValue += 3;
           }
         }
       }
