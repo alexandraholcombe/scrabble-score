@@ -28,6 +28,7 @@ namespace ScrabbleScoreApp
       char[] threePoint = {'b', 'c', 'm', 'p'};
       char[] fourPoint = {'f', 'h', 'v', 'w', 'y'};
 
+
       for (int i = 0; i < userInputArray.Length; i++)
       {
         //For 1 point
@@ -62,6 +63,12 @@ namespace ScrabbleScoreApp
             wordValue += 4;
           }
         }
+        //For 5 points
+        if (userInputArray[i] == 'k')
+        {
+          wordValue += 5;
+        }
+  
       }
       return wordValue;
     }
