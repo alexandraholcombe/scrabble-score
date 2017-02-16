@@ -24,55 +24,57 @@ namespace ScrabbleScoreApp
       int wordValue = 0;
 
       char[] onePoint = {'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'};
+      char[] twoPoint = {'d', 'g'};
       char[] threePoint = {'b', 'c', 'm', 'p'};
       char[] fourPoint = {'f', 'h', 'v', 'w', 'y'};
+      char[] fivePoint = {'k'};
+      char[] eightPoint = {'j', 'x'};
+      char[] tenPoint = {'q', 'z'};
+      char[][] pointArrays = {onePoint, twoPoint, threePoint, fourPoint, fivePoint, eightPoint, tenPoint};
 
 
       for (int i = 0; i < userInputArray.Length; i++)
       {
-        //For 1 point
-        for (int j = 0; j < onePoint.Length; j++)
+
+        for (int k = 0; k < pointArrays.Length; k++)
         {
-          if (userInputArray[i].Equals(onePoint[j]))
+          for (int j = 0; j < pointArrays[k].Length; j++)
           {
-            wordValue += 1;
+            //For 1 point
+            if (k == 0 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue += 1;
+            }
+            else if (k == 1 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue += 2;
+            }
+            //For 3 point
+            else if (k == 2 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue += 3;
+            }
+            //For 4 point
+            else if (k == 3 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue += 4;
+            }
+            //For 5 point
+            else if (k == 4 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue +=5;
+            }
+            //For 8 point
+            else if (k == 5 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue +=8;
+            }
+            //For 10 point
+            else if (k == 6 && userInputArray[i].Equals(pointArrays[k][j]))
+            {
+              wordValue +=10;
+            }
           }
-        }
-        //For 3 points
-        for (int j = 0; j < threePoint.Length; j++)
-        {
-          if (userInputArray[i].Equals(threePoint[j]))
-          {
-            wordValue += 3;
-          }
-        }
-        //For 4 points
-        for (int j = 0; j < fourPoint.Length; j++)
-        {
-          if (userInputArray[i].Equals(fourPoint[j]))
-          {
-            wordValue += 4;
-          }
-        }
-        //For 2 points
-        if (userInputArray[i] == 'd' || userInputArray[i] == 'g')
-        {
-          wordValue += 2;
-        }
-        //For 5 points
-        else if (userInputArray[i] == 'k')
-        {
-          wordValue += 5;
-        }
-        //For 8 points
-        else if (userInputArray[i] == 'j' || userInputArray[i] == 'x')
-        {
-          wordValue += 8;
-        }
-        //For 10 points
-        else if (userInputArray[i] == 'q' || userInputArray[i] == 'z')
-        {
-          wordValue += 10;
         }
       }
       return wordValue;
