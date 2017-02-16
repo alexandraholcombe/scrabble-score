@@ -40,37 +40,38 @@ namespace ScrabbleScoreApp
         {
           for (int j = 0; j < pointArrays[k].Length; j++)
           {
+            bool iteration = userInputArray[i].Equals(pointArrays[k][j]);
             //For 1 point
-            if (k == 0 && userInputArray[i].Equals(pointArrays[k][j]))
+            if (k == 0 && iteration)
             {
               wordValue += 1;
             }
-            else if (k == 1 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 1 && iteration)
             {
               wordValue += 2;
             }
             //For 3 point
-            else if (k == 2 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 2 && iteration)
             {
               wordValue += 3;
             }
             //For 4 point
-            else if (k == 3 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 3 && iteration)
             {
               wordValue += 4;
             }
             //For 5 point
-            else if (k == 4 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 4 && iteration)
             {
               wordValue +=5;
             }
             //For 8 point
-            else if (k == 5 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 5 && iteration)
             {
               wordValue +=8;
             }
             //For 10 point
-            else if (k == 6 && userInputArray[i].Equals(pointArrays[k][j]))
+            else if (k == 6 && iteration)
             {
               wordValue +=10;
             }
