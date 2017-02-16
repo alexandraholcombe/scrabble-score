@@ -25,5 +25,15 @@ namespace ScrabbleScoreApp
       int expectedResult = 1;
       Assert.Equal(expectedResult, result);
     }
+
+    [Fact]
+    public void ScrabbleScoreGenerator_ForUserInputDo_3()
+    {
+      string userInput = "do";
+      ScrabbleScore testScrabbleScore = new ScrabbleScore(userInput);
+      int result = testScrabbleScore.ScrabbleScoreGenerator();
+      int expectedResult = 3;
+      Assert.Equal(expectedResult, result);
+    }
   }
 }

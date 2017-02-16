@@ -20,18 +20,27 @@ namespace ScrabbleScoreApp
     public int ScrabbleScoreGenerator()
     {
       string userInput = GetUserInput().ToLower();
+      char[] userInputArray = userInput.ToCharArray();
       int wordValue = 0;
 
-      string[] onePoint = {"a", "e", "i", "o", "u", "l", "n", "r", "s", "t"};
-      for (int i = 0; i < onePoint.Length; i++)
+      char[] onePoint = {'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'};
+      char[] twoPoint = {'d', 'g'};
+
+      for (int i = 0; i < userInputArray.Length; i++)
       {
-        if (userInput == onePoint[i])
+        for (int j = 0; j < onePoint.Length; j++)
         {
-          wordValue += 1;
+          if (userInputArray[i].Equals(onePoint[j]))
+          {
+            wordValue += 1;
+          }
         }
-        else
+        for (int j = 0; j < twoPoint.Length; j++)
         {
-          wordValue += 0;
+          if (userInputArray[i].Equals(twoPoint[j]))
+          {
+            wordValue += 2;
+          }
         }
       }
       return wordValue;
