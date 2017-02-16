@@ -19,9 +19,22 @@ namespace ScrabbleScoreApp
 
     public int ScrabbleScoreGenerator()
     {
-      string userInput = GetUserInput();
+      string userInput = GetUserInput().ToLower();
+      int wordValue = 0;
 
-      return 0;
+      string[] onePoint = {"a", "e", "i", "o", "u", "l", "n", "r", "s", "t"};
+      for (int i = 0; i < onePoint.Length; i++)
+      {
+        if (userInput == onePoint[i])
+        {
+          wordValue += 1;
+        }
+        else
+        {
+          wordValue += 0;
+        }
+      }
+      return wordValue;
     }
   }
 }
